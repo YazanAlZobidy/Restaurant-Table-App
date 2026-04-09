@@ -1,3 +1,73 @@
-body{font-family:Arial;background:#fff5ee;}
-nav a{margin:10px;text-decoration:none;color:rgb(0, 0, 0);}
-nav a:hover{color:red;}
+body {
+    font-family: Arial;
+    background: #0f0f0f;
+    color: white;
+    margin: 0;
+}
+
+
+.navbar {
+    background: #1a1a1a;
+    padding: 15px 30px;
+}
+
+.navbar h1 {
+    display: inline;
+    color: gold;
+}
+
+.navbar div {
+    float: right;
+}
+
+.navbar a {
+    color: white;
+    margin-left: 15px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: gold;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: auto;
+    padding: 20px;
+}
+
+
+
+
+.hero img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+
+ul {
+    margin-top: 10px;
+}
+
+
+table {
+    margin-top: 15px;
+    border-collapse: collapse;
+    background: #1a1a1a;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #333;
+}
+
+th {
+    background: gold;
+    color: black;
+}
+
+
+tr:hover {
+    background: #2a2a2a;
+}
