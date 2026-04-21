@@ -1,3 +1,89 @@
-body{font-family:Arial;background:#fff5ee;}
-nav a{margin:10px;text-decoration:none;color:rgb(0, 0, 0);}
-nav a:hover{color:red;}
+body {
+    font-family: Arial;
+    background: #0f0f0f;
+    color: white;
+    margin: 0;
+}
+
+.unbooked {
+    color: #00ff88;
+    font-weight: bold;
+}
+
+
+.booked {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+
+.navbar {
+    background: #1a1a1a;
+    padding: 15px 30px;
+}
+
+.navbar h1 {
+    display: inline;
+    color: gold;
+}
+
+.navbar div {
+    float: right;
+}
+
+.navbar a {
+    color: white;
+    margin-left: 15px;
+    
+}
+
+.navbar a:hover {
+    color: gold;
+}
+
+
+.container {
+    border: 1px solid #222;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+
+
+.hero img {
+    width: 300px;
+    border-radius: 15px;
+}
+
+
+ul {
+    margin-top: 15px;
+}
+
+
+table {
+    margin-top: 15px;
+    border-collapse: collapse;
+    background: #1a1a1a;
+}
+
+th, td {
+    padding: 15px;
+    border: 1px solid #333;
+}
+
+th {
+    background: gold;
+    color: black;
+}
+
+
+tr:hover {
+    background: #2a2a2a;
+}
+body {
+    background-image: url('/images/loginphoto.jpeg'); 
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat }
