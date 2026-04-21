@@ -1,123 +1,102 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Restaurant Table Booking</title>
-<link rel="stylesheet" href="style.css">
-<style>h1{color:#8B0000;}</style>
-<script>
-
-</script>
+    <meta charset="utf-8">
+    <title>VIP Restaurant Booking - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script>
+        function homePageLoaded() {
+            showCurrentGreeting();
+            updateAvailabilitySummary();
+        }
+    </script>
 </head>
-<body>
+<body onload="homePageLoaded()">
+    <header>
+        <h1>VIP Restaurant Booking</h1>
+        <p id="greetingText"></p>
+    </header>
 
-<header>
-    <h1>Restaurant Booking</h1>
-</header>
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Signup</a>
+        <a href="about.html">About</a>
+    </nav>
 
-<nav>
-<a href="Home.html">Home</a>
-<a href="login.html">Login</a>
-<a href="signup.html">Signup</a>
-<a href="about.html">About</a>
-</nav>
+    <section class="card">
+        <article>
+            <h2 id="welcomeText">Welcome to our restaurant booking website.</h2>
+            <p>
+                This project helps customers reserve tables quickly, avoid waiting lines,
+                and see table availability clearly.
+            </p>
+            <p>
+                Click the image or the image map area to open the About page and learn more.
+            </p>
 
-<section>
-<h2>Book Your Table Easily</h2>
+            <div class="image-layer-wrapper">
+                <div class="layer-back"></div>
+                <div class="layer-front">
+                    <img id="projectImage" class="hero-image" src="photobooking.png" alt="Restaurant Booking" usemap="#project-map">
+                </div>
+            </div>
+            <map name="project-map">
+                <area shape="rect" coords="0,0,360,260" href="about.html" alt="About our project">
+            </map>
+            <p id="pictureCaption" class="inline-note">Reserve your table quickly and avoid waiting lines.</p>
 
-<a href="#table-section">Check Table Availability</a>
+            <input type="button" value="Personalize Welcome" onclick="showWelcomePrompt()">
+            <input type="button" value="Change Picture and Text" onclick="changePictureAndText()">
+            <input type="button" value="Suggest a Table" onclick="suggestTable()">
+            <p id="suggestionText"></p>
+        </article>
+    </section>
 
-<p>Click on the image below to learn more about our restaurant booking system.</p>
+    <section class="card list-box">
+        <h2 id="benefitsTitle">Benefits of Our Website</h2>
+        <p>
+            Use the button below to apply different list styles using JavaScript.
+        </p>
+        <input type="button" value="Choose List Style" onclick="chooseListStyle()">
+        <ol id="benefitsList">
+            <li>Allow customers to book tables easily.</li>
+            <li>Reduce long waiting lines and missed calls.</li>
+            <li>Provide clear information about table availability.</li>
+            <li>Send automatic booking confirmations.</li>
+            <li>Help restaurants manage reservations in an organized way.</li>
+        </ol>
+    </section>
 
-<a href="about.html"> 
-    <img src="https://th.bing.com/th/id/OIP.IDDJnojtqvsLcmqxSD0oOQHaE8?w=253&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3" 
-alt="Restaurant Booking" width="400" height="300">
-</a>
+    <section id="table-section" class="card table-box">
+        <h2>Check Table Availability</h2>
+        <p><a href="#table-section"> Jump to table section</a></p>
+        <table>
+            <tr>
+                <th>Table</th>
+                <th>Seats</th>
+                <th>Status</th>
+            </tr>
+            <tbody id="availabilityBody">
+                <tr><td>1</td><td>2</td><td>Available</td></tr>
+                <tr><td>2</td><td>4</td><td>Booked</td></tr>
+                <tr><td>3</td><td>3</td><td>Booked</td></tr>
+                <tr><td>4</td><td>6</td><td>Booked</td></tr>
+                <tr><td>5</td><td>4</td><td>Available</td></tr>
+                <tr><td>6</td><td>8</td><td>Available</td></tr>
+                <tr><td>7</td><td>2</td><td>Available</td></tr>
+                <tr><td>8</td><td>4</td><td>Booked</td></tr>
+                <tr><td>9</td><td>6</td><td>Available</td></tr>
+                <tr><td>10</td><td>8</td><td>Booked</td></tr>
+            </tbody>
+        </table>
+        <input type="button" value="Refresh Availability Summary" onclick="updateAvailabilitySummary()">
+        <p id="summaryText" class="inline-note"></p>
+    </section>
 
-
-<h1>Benefits of our website:</h1>
-
-<ul>
-
-    <li>Allow customers to book tables easily </li>
-    <li>Reduce long waiting lines and missed calls.</li>
-    <li>Provide clear, real-time information about table availability</li>
-    <li>Send automatic booking confirmations.</li>
-    <li>Send reminders before the reservation time.</li>
-    <li>Help restaurants manage reservations in an organized way.</li>
-    <li>provide employees with an easy-to-use, real-time booking dashboard</li>
-</ul>
-<section id="table-section">
- <h2>Check Table Availability:</h2>
-
-  <table border="1">
-  <tr>
-    <th>Table</th>
-    <th>Seats</th>
-    <th>Status</th>
-  </tr>
-  <tr>
-    <td>1</td>
-    <td>2</td>
-    <td>Available</td>
-  </tr>
-  <tr>
-    <td>2</td>
-    <td>4</td>
-    <td>Booked</td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>3</td>
-    <td>Booked</td>
-  </tr>
-  <tr>
-    <td>4</td>
-    <td>6</td>
-    <td>Booked</td>
-  </tr>
-  <tr>
-    <td>5</td>
-    <td>4</td>
-    <td>Available</td>
-  </tr>
-  <tr>
-    <td>6</td>
-    <td>8</td>
-    <td>Available</td>
-  </tr>
-  <tr>
-    <td>7</td>
-    <td>2</td>
-    <td>Available</td>
-  </tr>
-  <tr>
-    <td>8</td>
-    <td>4</td>
-    <td>Booked</td>
-  </tr>
-  <tr>
-    <td>9</td>
-    <td>7</td>
-    <td>Available</td>
-  </tr>
-  <tr>
-    <td>10</td>
-    <td>8</td>
-    <td>Booked</td>
-  </tr>
- </table>
-</section>
-
-
-
-
-
-</section>
-
-<footer>
-    <p>Restaurant Booking System 2026</p>
-</footer>
-
-
+    <footer>
+        <p>VIP Restaurant Booking System 2026</p>
+    </footer>
 </body>
 </html>
