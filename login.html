@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login-Restaurant Table Booking</title>
+    <meta charset="utf-8">
+    <title>VIP Restaurant Booking - Login</title>
     <link rel="stylesheet" href="style.css">
-    <img src="photobooking.png" alt="Example image" width="300" height="300">
+    <script src="script.js"></script>
 </head>
 <body>
+    <header>
+        <h1>VIP Restaurant Booking</h1>
+    </header>
 
-    <h2 style="text-align:center;">Login</h2>
-    <div style="
-        width: 300px;
-        margin: 100px auto;
-        padding: 20px;
-        background: #1a1a1a;
-        border-radius: 10px;
-        border: 1px solid #ffce63;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.6);
-    ">
-    
-        <form>
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Signup</a>
+        <a href="about.html">About</a>
+    </nav>
 
-            <label>Username </label><input type="text" placeholder="Username" autofocus>
-            <br>
-            <br>
-            <label>Password </label><input type="password" placeholder="Password" autofocus>
-            <br>
-            <br>
-            <input type="submit" value="Login">
-            <p>Don't have an account?</p>
-            <a href="signup.html" style="color:gold;">Register</a>
+    <section class="card">
+        <h2 style="text-align:center;">Login</h2>
+        <img class="page-image" src="photobooking.png" alt="Restaurant Booking" usemap="#login-map">
+        <map name="login-map">
+            <area shape="rect" coords="0,0,360,260" href="about.html" alt="About our project">
+        </map>
+        <p style="text-align:center;">Use your account to access your reservations.</p>
 
-        </form>
-    </div>
+        <div id="loginBox" class="form-box" onmouseover="changeBoxColor('loginBox', '#fff9f3')" onmouseout="changeBoxColor('loginBox', 'white')">
+            <form onsubmit="return validateLoginForm();">
+                <label for="loginUsername">Username</label>
+                <input id="loginUsername" type="text" placeholder="Enter username">
 
+                <label for="loginPassword">Password</label>
+                <input id="loginPassword" type="password" placeholder="Enter password">
+
+                <input type="submit" value="Login">
+            </form>
+            <p>Don't have an account? <a href="signup.html">Register here</a></p>
+        </div>
+    </section>
+
+    <footer>
+        <p>VIP Restaurant Booking System 2026</p>
+    </footer>
 </body>
 </html>

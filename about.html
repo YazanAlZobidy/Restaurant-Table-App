@@ -1,22 +1,47 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>About-Restaurant Table Booking</title><link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <title>VIP Restaurant Booking - About</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
-
-
 <body>
-<h2>About Restaurant Booking</h2>
-<img src="https://image.lexica.art/full_jpg/5117867e-51f6-4f75-9c09-5b5cb2c3f709"
-alt="Restaurant Booking" width="400" height="300">
-<article>
-         <p> This Project aims to establish website allowing users to view available tables,
-             select their preferred time,select either outdoor or indoor seating, and receive fast confirmation.
-         </p>
-         <p>In order to avoid users from missing their reservation, the app also sends reminders before to the reservation time.
-             The solution provides restaurant employees with a simple overview that shows all future bookings.
-              This keeps them organized and keeps them from making duplicate reservations.
+    <header>
+        <h1>About VIP Restaurant Booking</h1>
+    </header>
+
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Signup</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <section class="card">
+        <img class="page-image" src="photobooking.png" alt="Restaurant project image" usemap="#about-map">
+        <map name="about-map">
+            <area shape="rect" coords="0,0,360,260" href="about.html" alt="About our project">
+        </map>
+
+        <article>
+            <h2>Project Idea</h2>
+            <p>
+                This project is a static website for restaurant table booking.
+                It helps users view table availability, choose pages easily, and complete login and signup actions.
             </p>
-</article>
+            <p>
+                The website also demonstrates JavaScript features required in the assignment,
+                such as prompt dialogs, if...else decisions, switch selection, form validation,
+                functions, events, repetition and changing HTML and CSS with script.
+            </p>
+            <input type="button" value="Show Welcome Prompt" onclick="showWelcomePrompt()">
+            <p id="welcomeText" class="inline-note">Click the button to display a personalized welcome message.</p>
+        </article>
+    </section>
+
+    <footer>
+        <p>VIP Restaurant Booking System 2026</p>
+    </footer>
 </body>
 </html>

@@ -1,40 +1,80 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Signup-Restaurant Table Booking</title>
+    <meta charset="utf-8">
+    <title>VIP Restaurant Booking - Signup</title>
     <link rel="stylesheet" href="style.css">
-      <img src="photobooking.png" alt="Example image" width="300" height="300">
+    <script src="script.js"></script>
+    <script>
+        function showSeatPlan() {
+            var plan;
+            var choice;
+
+            choice = document.getElementById("seatChoice").value;
+            plan = document.getElementById("seatPlan");
+
+            switch (choice) {
+                case "indoor":
+                    plan.innerHTML = "Indoor seating is recommended for a quiet dining experience.";
+                    break;
+                case "outdoor":
+                    plan.innerHTML = "Outdoor seating is recommended for fresh air and family groups.";
+                    break;
+                default:
+                    plan.innerHTML = "Choose a seating plan to view the recommendation.";
+            }
+        }
+    </script>
 </head>
 <body>
+    <header>
+        <h1>VIP Restaurant Booking</h1>
+    </header>
 
-<br>
-<br>
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Signup</a>
+        <a href="about.html">About</a>
+    </nav>
 
-    <h2 style="text-align:center;">Signup</h2>
-    <div style="
-    width: 300px;
-    margin: 100px auto;
-    padding: 20px;
-    background: #1a1a1a;
-    border-radius: 10px;
-    border: 1px solid #ffce63;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.6);">
+    <section class="card">
+        <h2 style="text-align:center;">Signup</h2>
+        <img class="page-image" src="loginphoto.jpeg" alt="Signup page image" usemap="#signup-map">
+        <map name="signup-map">
+            <area shape="rect" coords="0,0,360,260" href="about.html" alt="About our project">
+        </map>
 
-    <form>
+        <div id="signupBox" class="form-box" onmouseover="changeBoxColor('signupBox', '#fff9f3')" onmouseout="changeBoxColor('signupBox', 'white')">
+            <form onsubmit="return validateSignupForm();">
+                <label for="signupName">Full Name</label>
+                <input id="signupName" type="text" placeholder="Enter full name">
 
-        <label>Name  </label><input type="text" placeholder="Name" autofocus>
-        <br>
-        <br>
-        <label>Email  </label><input type="email" placeholder="Email" autofocus>
-        <br>
-        <br>
-        <label>Password  </label><input type="password" placeholder="Password" autofocus>
-        <br>
-        <br>
-        <input type="submit" value="Sign Up">
+                <label for="signupEmail">Email</label>
+                <input id="signupEmail" type="email" placeholder="Enter email">
 
-    </form>
+                <label for="signupPassword">Password</label>
+                <input id="signupPassword" type="password" placeholder="Enter password">
 
-</div>
+                <label for="signupAge">Age</label>
+                <input id="signupAge" type="number" placeholder="Enter age">
+
+                <label for="seatChoice">Preferred Seating</label>
+                <select id="seatChoice" onchange="showSeatPlan()">
+                    <option value="">Select seating</option>
+                    <option value="indoor">Indoor</option>
+                    <option value="outdoor">Outdoor</option>
+                </select>
+
+                <p id="seatPlan" class="inline-note">Choose a seating plan to view the recommendation.</p>
+
+                <input type="submit" value="Sign Up">
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>VIP Restaurant Booking System 2026</p>
+    </footer>
 </body>
 </html>
