@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>VIP Restaurant Booking - Home</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <script>
+        function homePageLoaded() {
+            showCurrentGreeting();
+            updateAvailabilitySummary();
+        }
+    </script>
+</head>
+<body onload="homePageLoaded()">
+    <header>
+        <h1>VIP Restaurant Booking</h1>
+        <p id="greetingText"></p>
+    </header>
+
+    <nav>
+        <a href="Home.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="signup.html">Signup</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <section class="card">
+        <article>
+            <h2 id="welcomeText">Welcome to our restaurant booking website.</h2>
+            <p>
+                This project helps customers reserve tables quickly, avoid waiting lines,
+                and see table availability clearly.
+            </p>
+            <p>
+                Click the image or the image map area to open the About page and learn more.
+            </p>
+
+            <div class="image-layer-wrapper">
+                <div class="layer-back"></div>
+                <div class="layer-front">
+                    <img id="projectImage" class="hero-image" src="photobooking.png" alt="Restaurant Booking" usemap="#project-map">
+                </div>
+            </div>
+            <map name="project-map">
+                <area shape="rect" coords="0,0,360,260" href="about.html" alt="About our project">
+            </map>
+            <p id="pictureCaption" class="inline-note">Reserve your table quickly and avoid waiting lines.</p>
+
+            <input type="button" value="Personalize Welcome" onclick="showWelcomePrompt()">
+            <input type="button" value="Change Picture and Text" onclick="changePictureAndText()">
+            <input type="button" value="Suggest a Table" onclick="suggestTable()">
+            <p id="suggestionText"></p>
+        </article>
+    </section>
+
+    <section class="card list-box">
+        <h2 id="benefitsTitle">Benefits of Our Website</h2>
+        <p>
+            Use the button below to apply different list styles using JavaScript.
+        </p>
+        <input type="button" value="Choose List Style" onclick="chooseListStyle()">
+        <ol id="benefitsList">
+            <li>Allow customers to book tables easily.</li>
+            <li>Reduce long waiting lines and missed calls.</li>
+            <li>Provide clear information about table availability.</li>
+            <li>Send automatic booking confirmations.</li>
+            <li>Help restaurants manage reservations in an organized way.</li>
+        </ol>
+    </section>
+
+    <section id="table-section" class="card table-box">
+        <h2>Check Table Availability</h2>
+        <p><a href="#table-section"> Jump to table section</a></p>
+        <table>
+            <tr>
+                <th>Table</th>
+                <th>Seats</th>
+                <th>Status</th>
+            </tr>
+            <tbody id="availabilityBody">
+                <tr><td>1</td><td>2</td><td>Available</td></tr>
+                <tr><td>2</td><td>4</td><td>Booked</td></tr>
+                <tr><td>3</td><td>3</td><td>Booked</td></tr>
+                <tr><td>4</td><td>6</td><td>Booked</td></tr>
+                <tr><td>5</td><td>4</td><td>Available</td></tr>
+                <tr><td>6</td><td>8</td><td>Available</td></tr>
+                <tr><td>7</td><td>2</td><td>Available</td></tr>
+                <tr><td>8</td><td>4</td><td>Booked</td></tr>
+                <tr><td>9</td><td>6</td><td>Available</td></tr>
+                <tr><td>10</td><td>8</td><td>Booked</td></tr>
+            </tbody>
+        </table>
+        <input type="button" value="Refresh Availability Summary" onclick="updateAvailabilitySummary()">
+        <p id="summaryText" class="inline-note"></p>
+    </section>
+
+    <footer>
+        <p>VIP Restaurant Booking System 2026</p>
+    </footer>
+</body>
+</html>
